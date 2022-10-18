@@ -11,4 +11,5 @@ console.log('The current date is:',get_Date_Today.getDate());
 let get_First_Day_Of_The_Week = new Date(get_Date_Today.setDate(get_Date_Today.getDate() - get_Date_Today.getDay() + 1));
 
 // print first day of the week
-console.log('The first date of the week is:',get_First_Day_Of_The_Week);
+console.log('The first day of the week is:',get_First_Day_Of_The_Week.toLocaleDateString()
+);
