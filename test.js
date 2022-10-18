@@ -1,13 +1,14 @@
-let date_today = new Date();
+// create a variable to get date today
+let get_Date_Today = new Date();
 
-console.log(`The current day index of the week is: ${date_today.getDay()}`);
+// print index current day by getDay()
+console.log('The index of current day is:',get_Date_Today.getDay());
 
-console.log(`The current date of the week is: ${date_today.getDate()}`);
+// print current date by getDate()
+console.log('The current date is:',get_Date_Today.getDate());
 
-let first_day_of_the_week = new Date(date_today.setDate(date_today.getDate() - date_today.getDay() ));
+// get first day of the week
+let get_First_Day_Of_The_Week = new Date(get_Date_Today.setDate(get_Date_Today.getDate() - get_Date_Today.getDay() + 1));
 
-let last_day_of_the_week = new Date(date_today.setDate(date_today.getDate() - date_today.getDay() + 6));
-
-console.log(`The first date of the week is: ${first_day_of_the_week}`); 
-
-console.log(`The last day of the week is: ${last_day_of_the_week}`);
+// print first day of the week
+console.log('The first date of the week is:',get_First_Day_Of_The_Week);
