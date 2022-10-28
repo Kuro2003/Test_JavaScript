@@ -1,15 +1,20 @@
-// create a variable to get date today
-let get_Date_Today = new Date();
+function get_hours_and_minutes(total_minutes) {
+    const hours = Math.floor(total_minutes / 60);
+    const minutes = total_minutes % 60;
+    return `${covert_2_digits(hours)}:${covert_2_digits(minutes)}`;
+}
 
-// print index current day by getDay()
-console.log('The index of current day is:',get_Date_Today.getDay());
+function covert_2_digits(numbers) {
+    return numbers.toString().padStart(2, '0');
+}
 
-// print current date by getDate()
-console.log('The current date is:',get_Date_Today.getDate());
+num1 = 100;
+num2 = 150;
+num3 = 360;
 
-// get first day of the week
-let get_First_Day_Of_The_Week = new Date(get_Date_Today.setDate(get_Date_Today.getDate() - get_Date_Today.getDay() + 1));
-
-// print first day of the week
-console.log('The first day of the week is:',get_First_Day_Of_The_Week.toLocaleDateString()
-);
+console.log(num1 + " convert to hours and minutes: " +
+get_hours_and_minutes(num1)); // 01:40
+console.log(num2 + " convert to hours and minutes: " +
+get_hours_and_minutes(num2)); // 02:30
+console.log(num3 + " convert to hours and minutes: " +
+get_hours_and_minutes(num3)); // 06:00
